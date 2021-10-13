@@ -39,11 +39,17 @@ class Shape {
         const Point& getOrigin() const { return origin; }
         // PROMISES: returns an immutable reference to the origin of the shape
 
-        char* getName() const { return shapeName; }
+        virtual char* getName() const { return shapeName; }
         // PROMISES: returns a pointer to the shapeName
 
         virtual void display() const;
         // PROMISES: displays the shape name and origin coordinates
+
+        virtual double area() const = 0;
+        // PROMISES: Returns the area of the shape (pure virtual)
+        
+        virtual double perimeter() const = 0;
+        // PROMISES: Returns the perimeter of the shape (pure virtual)
 
         double distance(Shape& other) const;
         // PROMISES: returns the distance between this shape and another

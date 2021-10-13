@@ -15,7 +15,7 @@ using namespace std;
 //child of Square and grandchild of Shape, represents a Rectangle
 //side_b defines the length of the second side (side_a and side_b)
 class Rectangle : public Square {
-    private:
+    protected:
         double side_b;
 
     public:

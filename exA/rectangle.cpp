@@ -9,7 +9,7 @@
 
 //constructor
 Rectangle::Rectangle(const double x, const double y, const double side_a, const double side_b, 
-    const char* shapeName) : Square(x, y, side_a, shapeName)
+    const char* shapeName) : Shape(Point(x, y), shapeName), Square(x, y, side_a, shapeName)
 {
     this->side_b = side_b;
 }
